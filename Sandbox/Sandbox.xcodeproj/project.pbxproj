@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		447894052742B910003F4E17 /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 447894042742B910003F4E17 /* libEngine.dylib */; };
+		447894072742CB9A003F4E17 /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 447894062742CB9A003F4E17 /* libEngine.dylib */; };
 		44DF98C227407147008BBD74 /* SandboxApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44DF98C127407147008BBD74 /* SandboxApp.cpp */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		447894042742B910003F4E17 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		447894062742CB9A003F4E17 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		4495DEFB274029EF00B1ABF0 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DF98C127407147008BBD74 /* SandboxApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SandboxApp.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				447894052742B910003F4E17 /* libEngine.dylib in Frameworks */,
+				447894072742CB9A003F4E17 /* libEngine.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +69,7 @@
 		4495DF0927402AE700B1ABF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				447894042742B910003F4E17 /* libEngine.dylib */,
+				447894062742CB9A003F4E17 /* libEngine.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
