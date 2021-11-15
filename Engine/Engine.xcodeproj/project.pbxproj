@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		447894172742D42A003F4E17 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 447894162742D42A003F4E17 /* Event.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44DF98C7274073A5008BBD74 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44DF98C5274073A5008BBD74 /* Application.cpp */; };
 		44DF98C8274073A5008BBD74 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 44DF98C6274073A5008BBD74 /* Application.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44DF98CA274077E8008BBD74 /* Engine.h in Headers */ = {isa = PBXBuildFile; fileRef = 44DF98C9274077E8008BBD74 /* Engine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		447894162742D42A003F4E17 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../../../../Engine/src/Engine/Events/Event.h; sourceTree = "<group>"; };
+		4478941A2742E7C8003F4E17 /* ApplicationEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ApplicationEvent.h; path = ../../../../Engine/src/Engine/Events/ApplicationEvent.h; sourceTree = "<group>"; };
+		4478941B2742F8D5003F4E17 /* KeyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KeyEvent.h; path = ../../../../Engine/src/Engine/Events/KeyEvent.h; sourceTree = "<group>"; };
 		4495DEEB274029C600B1ABF0 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DF98C5274073A5008BBD74 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		44DF98C6274073A5008BBD74 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
@@ -36,6 +40,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		447894152742D419003F4E17 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				447894162742D42A003F4E17 /* Event.h */,
+				4478941A2742E7C8003F4E17 /* ApplicationEvent.h */,
+				4478941B2742F8D5003F4E17 /* KeyEvent.h */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
 		4495DEE2274029C600B1ABF0 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +78,7 @@
 		44DF98C4274072BD008BBD74 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				447894152742D419003F4E17 /* Events */,
 				44DF98C5274073A5008BBD74 /* Application.cpp */,
 				44DF98C6274073A5008BBD74 /* Application.h */,
 				44DF98CB27407CE1008BBD74 /* EntryPoint.h */,
@@ -82,6 +97,7 @@
 			files = (
 				44DF98CD27407EB8008BBD74 /* EntryPoint.h in Headers */,
 				44DF98CA274077E8008BBD74 /* Engine.h in Headers */,
+				447894172742D42A003F4E17 /* Event.h in Headers */,
 				44DF98C8274073A5008BBD74 /* Application.h in Headers */,
 				44DF98D1274087F7008BBD74 /* Log.h in Headers */,
 			);
