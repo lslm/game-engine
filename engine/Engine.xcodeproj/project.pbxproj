@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4495DEEB274029C600B1ABF0 /* libengine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libengine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		4495DEEB274029C600B1ABF0 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DF98C5274073A5008BBD74 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		44DF98C6274073A5008BBD74 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		44DF98C9274077E8008BBD74 /* Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		4495DEEC274029C600B1ABF0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4495DEEB274029C600B1ABF0 /* libengine.dylib */,
+				4495DEEB274029C600B1ABF0 /* libEngine.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,9 +90,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4495DEEA274029C600B1ABF0 /* engine */ = {
+		4495DEEA274029C600B1ABF0 /* Engine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4495DEEF274029C600B1ABF0 /* Build configuration list for PBXNativeTarget "engine" */;
+			buildConfigurationList = 4495DEEF274029C600B1ABF0 /* Build configuration list for PBXNativeTarget "Engine" */;
 			buildPhases = (
 				4495DEE7274029C600B1ABF0 /* Headers */,
 				4495DEE8274029C600B1ABF0 /* Sources */,
@@ -102,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = engine;
+			name = Engine;
 			productName = engine;
-			productReference = 4495DEEB274029C600B1ABF0 /* libengine.dylib */;
+			productReference = 4495DEEB274029C600B1ABF0 /* libEngine.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -121,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4495DEE6274029C600B1ABF0 /* Build configuration list for PBXProject "engine" */;
+			buildConfigurationList = 4495DEE6274029C600B1ABF0 /* Build configuration list for PBXProject "Engine" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -134,7 +134,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4495DEEA274029C600B1ABF0 /* engine */,
+				4495DEEA274029C600B1ABF0 /* Engine */,
 			);
 		};
 /* End PBXProject section */
@@ -302,7 +302,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4495DEE6274029C600B1ABF0 /* Build configuration list for PBXProject "engine" */ = {
+		4495DEE6274029C600B1ABF0 /* Build configuration list for PBXProject "Engine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4495DEED274029C600B1ABF0 /* Debug */,
@@ -311,7 +311,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4495DEEF274029C600B1ABF0 /* Build configuration list for PBXNativeTarget "engine" */ = {
+		4495DEEF274029C600B1ABF0 /* Build configuration list for PBXNativeTarget "Engine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4495DEF0274029C600B1ABF0 /* Debug */,

@@ -5,6 +5,6 @@
       location = "group:Sandbox/Sandbox.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:engine/engine.xcodeproj">
+      location = "group:/Users/lucas.santos/Projects/cpp/Immersive/engine/Engine.xcodeproj">
    </FileRef>
 </Workspace>

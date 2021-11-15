@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4495DEEA274029C600B1ABF0"
-               BuildableName = "libengine.dylib"
-               BlueprintName = "engine"
-               ReferencedContainer = "container:engine.xcodeproj">
+               BuildableName = "libEngine.dylib"
+               BlueprintName = "Engine"
+               ReferencedContainer = "container:Engine.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -51,9 +51,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4495DEEA274029C600B1ABF0"
-            BuildableName = "libengine.dylib"
-            BlueprintName = "engine"
-            ReferencedContainer = "container:engine.xcodeproj">
+            BuildableName = "libEngine.dylib"
+            BlueprintName = "Engine"
+            ReferencedContainer = "container:Engine.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
