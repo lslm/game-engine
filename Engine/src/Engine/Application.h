@@ -1,6 +1,5 @@
 #pragma once
 
-#include <stdio.h>
 #include "Engine/Event.h"
 
 namespace Engine {

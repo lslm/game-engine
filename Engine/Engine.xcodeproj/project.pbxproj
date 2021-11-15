@@ -20,6 +20,7 @@
 		447894162742D42A003F4E17 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../../../../Engine/src/Engine/Events/Event.h; sourceTree = "<group>"; };
 		4478941A2742E7C8003F4E17 /* ApplicationEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ApplicationEvent.h; path = ../../../../Engine/src/Engine/Events/ApplicationEvent.h; sourceTree = "<group>"; };
 		4478941B2742F8D5003F4E17 /* KeyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KeyEvent.h; path = ../../../../Engine/src/Engine/Events/KeyEvent.h; sourceTree = "<group>"; };
+		4478942227430DFF003F4E17 /* epch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = epch.h; path = ../../../../Engine/src/Engine/Core/epch.h; sourceTree = "<group>"; };
 		4495DEEB274029C600B1ABF0 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DF98C5274073A5008BBD74 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		44DF98C6274073A5008BBD74 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
@@ -50,6 +51,29 @@
 			path = Events;
 			sourceTree = "<group>";
 		};
+		4478941C27430AA2003F4E17 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				4478941D27430AAD003F4E17 /* Darwin */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		4478941D27430AAD003F4E17 /* Darwin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Darwin;
+			sourceTree = "<group>";
+		};
+		4478942127430DDD003F4E17 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4478942227430DFF003F4E17 /* epch.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		4495DEE2274029C600B1ABF0 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +102,8 @@
 		44DF98C4274072BD008BBD74 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				4478942127430DDD003F4E17 /* Core */,
+				4478941C27430AA2003F4E17 /* Platform */,
 				447894152742D419003F4E17 /* Events */,
 				44DF98C5274073A5008BBD74 /* Application.cpp */,
 				44DF98C6274073A5008BBD74 /* Application.h */,
@@ -288,12 +314,25 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
-				HEADER_SEARCH_PATHS = "vendor/spdlog/include/**";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				HEADER_SEARCH_PATHS = (
+					"vendor/spdlog/include/**",
+					"vendor/GLFW/include/**",
+					"src/Engine/Core/**",
+				);
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-I/src/Engine/Core/",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "vender/spdlog/include/**";
+				USER_HEADER_SEARCH_PATHS = (
+					"vendor/GLFW/include/**",
+					"vendor/spdlog/include/**",
+					"src/Engine/Core/**",
+				);
 			};
 			name = Debug;
 		};
@@ -306,12 +345,25 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
-				HEADER_SEARCH_PATHS = "vendor/spdlog/include/**";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				HEADER_SEARCH_PATHS = (
+					"vendor/spdlog/include/**",
+					"vendor/GLFW/include/**",
+					"src/Engine/Core/**",
+				);
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-I/src/Engine/Core/",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "vender/spdlog/include/**";
+				USER_HEADER_SEARCH_PATHS = (
+					"vendor/GLFW/include/**",
+					"vendor/spdlog/include/**",
+					"src/Engine/Core/**",
+				);
 			};
 			name = Release;
 		};
