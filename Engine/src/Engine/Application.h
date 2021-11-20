@@ -1,8 +1,7 @@
 #pragma once
 
 #include "epch.h"
-
-#include "Engine/DarwinWindow.h"
+#include "Window.h"
 
 namespace Engine {
     class Application {
@@ -13,7 +12,7 @@ namespace Engine {
         void EngineVersion();
         
     private:
-        std::unique_ptr<DarwinWindow> m_Window;
+        std::unique_ptr<Window> m_Window;
         bool m_Running = true;
     };
 

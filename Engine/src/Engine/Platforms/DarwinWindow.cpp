@@ -2,9 +2,9 @@
 
 namespace Engine
 {
-    bool s_GLFWInitialized = false;
+    static bool s_GLFWInitialized = false;
     
-    DarwinWindow* DarwinWindow::Create(const WindowProps& props)
+    Window* Window::Create(const WindowProps& props)
     {
         return new DarwinWindow(props);
     }
@@ -55,11 +55,8 @@ namespace Engine
     
     void DarwinWindow::OnUpdate()
     {
-        if(!glfwWindowShouldClose(m_Window))
-        {
-            glfwSwapBuffers(m_Window);
-            glfwPollEvents();
-        }
+        glfwSwapBuffers(m_Window);
+        glfwPollEvents();
     }
     
     void DarwinWindow::SetVSync(bool enabled)
