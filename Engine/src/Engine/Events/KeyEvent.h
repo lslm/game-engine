@@ -37,4 +37,20 @@ namespace Engine
         int m_RepeatCount;
     };
 
+    class KeyReleasedEvent : public KeyEvent
+    {
+    public:
+        KeyReleasedEvent(int keyCode) : KeyEvent(keyCode) {}
+        
+        std::string ToString() const override
+        {
+            std::stringstream ss;
+            ss << "KeyReleasedEvent: " << m_KeyCode;
+            return ss.str();
+        }
+        
+        static EventType GetStaticType()        { return EventType::KeyReleased; }
+        EventType GetEventType() const override { return GetStaticType(); }
+        const char* GetName() const override    { return "KeyReleased"; }
+    };
 }
