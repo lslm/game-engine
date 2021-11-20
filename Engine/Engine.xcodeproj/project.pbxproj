@@ -16,6 +16,8 @@
 		44D013AE274975550013CE9F /* Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D013A82749718A0013CE9F /* Layer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44D013B0274976860013CE9F /* LayerStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D013AF274975A30013CE9F /* LayerStack.cpp */; };
 		44D013B12749768C0013CE9F /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D013AA274972DD0013CE9F /* Layer.cpp */; };
+		44D013B5274994960013CE9F /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D013B3274994960013CE9F /* ImGuiLayer.cpp */; };
+		44D013B6274994960013CE9F /* ImGuiLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D013B4274994960013CE9F /* ImGuiLayer.h */; };
 		44DF98C7274073A5008BBD74 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44DF98C5274073A5008BBD74 /* Application.cpp */; };
 		44DF98C8274073A5008BBD74 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 44DF98C6274073A5008BBD74 /* Application.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44DF98CA274077E8008BBD74 /* Engine.h in Headers */ = {isa = PBXBuildFile; fileRef = 44DF98C9274077E8008BBD74 /* Engine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +46,8 @@
 		44D013AA274972DD0013CE9F /* Layer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Layer.cpp; path = ../../../Engine/src/Engine/Layer.cpp; sourceTree = "<group>"; };
 		44D013AB2749741E0013CE9F /* LayerStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LayerStack.h; path = ../../../Engine/src/Engine/LayerStack.h; sourceTree = "<group>"; };
 		44D013AF274975A30013CE9F /* LayerStack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LayerStack.cpp; path = ../../../Engine/src/Engine/LayerStack.cpp; sourceTree = "<group>"; };
+		44D013B3274994960013CE9F /* ImGuiLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ImGuiLayer.cpp; path = ../../../../Engine/src/Engine/ImGui/ImGuiLayer.cpp; sourceTree = "<group>"; };
+		44D013B4274994960013CE9F /* ImGuiLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImGuiLayer.h; path = ../../../../Engine/src/Engine/ImGui/ImGuiLayer.h; sourceTree = "<group>"; };
 		44DF98C5274073A5008BBD74 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		44DF98C6274073A5008BBD74 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		44DF98C9274077E8008BBD74 /* Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		44D013B22749947E0013CE9F /* ImGui */ = {
+			isa = PBXGroup;
+			children = (
+				44D013B3274994960013CE9F /* ImGuiLayer.cpp */,
+				44D013B4274994960013CE9F /* ImGuiLayer.h */,
+			);
+			path = ImGui;
+			sourceTree = "<group>";
+		};
 		44DF98BF27406F6C008BBD74 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +129,7 @@
 		44DF98C4274072BD008BBD74 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				44D013B22749947E0013CE9F /* ImGui */,
 				44F868F12743578E006B237A /* Platforms */,
 				4478942127430DDD003F4E17 /* Core */,
 				447894152742D419003F4E17 /* Events */,
@@ -163,6 +177,7 @@
 				44D013AD2749752E0013CE9F /* LayerStack.h in Headers */,
 				44DF98CA274077E8008BBD74 /* Engine.h in Headers */,
 				447894172742D42A003F4E17 /* Event.h in Headers */,
+				44D013B6274994960013CE9F /* ImGuiLayer.h in Headers */,
 				44DF98C8274073A5008BBD74 /* Application.h in Headers */,
 				44F868DE274321B6006B237A /* epch.h in Headers */,
 				44D013AE274975550013CE9F /* Layer.h in Headers */,
@@ -232,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44F868F4274357BD006B237A /* DarwinWindow.cpp in Sources */,
+				44D013B5274994960013CE9F /* ImGuiLayer.cpp in Sources */,
 				44DF98D0274087F7008BBD74 /* Log.cpp in Sources */,
 				44D013B0274976860013CE9F /* LayerStack.cpp in Sources */,
 				44DF98C7274073A5008BBD74 /* Application.cpp in Sources */,
@@ -366,6 +382,7 @@
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					"vendor/spdlog/include/**",
+					vendor/imgui,
 				);
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LIBRARY_SEARCH_PATHS = (
@@ -397,6 +414,7 @@
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					"vendor/spdlog/include/**",
+					vendor/imgui,
 				);
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LIBRARY_SEARCH_PATHS = (
