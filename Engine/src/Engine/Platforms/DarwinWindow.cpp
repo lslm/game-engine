@@ -56,6 +56,11 @@ namespace Engine
         
         glfwMakeContextCurrent(m_Window);
         glfwSetWindowUserPointer(m_Window, &m_Data);
+        
+        // initializes GLEW
+        glewExperimental = GL_TRUE;
+        glewInit();
+        
         SetVSync(true);
         
         // Set GLFW callbacks
