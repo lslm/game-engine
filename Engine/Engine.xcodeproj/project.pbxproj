@@ -14,6 +14,12 @@
 		44DF98CD27407EB8008BBD74 /* EntryPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 44DF98CB27407CE1008BBD74 /* EntryPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44DF98D0274087F7008BBD74 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44DF98CE274087F7008BBD74 /* Log.cpp */; };
 		44DF98D1274087F7008BBD74 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 44DF98CF274087F7008BBD74 /* Log.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44F868DE274321B6006B237A /* epch.h in Headers */ = {isa = PBXBuildFile; fileRef = 4478942227430DFF003F4E17 /* epch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44F868E127432667006B237A /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = 4478942427431294003F4E17 /* Window.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44F868F027435708006B237A /* KeyEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 4478941B2742F8D5003F4E17 /* KeyEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44F868F4274357BD006B237A /* DarwinWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44F868F2274357BD006B237A /* DarwinWindow.cpp */; };
+		44F868F5274357BD006B237A /* DarwinWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 44F868F3274357BD006B237A /* DarwinWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44F868FE27436309006B237A /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F868FD27436309006B237A /* libglfw.3.3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,7 @@
 		4478941A2742E7C8003F4E17 /* ApplicationEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ApplicationEvent.h; path = ../../../../Engine/src/Engine/Events/ApplicationEvent.h; sourceTree = "<group>"; };
 		4478941B2742F8D5003F4E17 /* KeyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KeyEvent.h; path = ../../../../Engine/src/Engine/Events/KeyEvent.h; sourceTree = "<group>"; };
 		4478942227430DFF003F4E17 /* epch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = epch.h; path = ../../../../Engine/src/Engine/Core/epch.h; sourceTree = "<group>"; };
+		4478942427431294003F4E17 /* Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Window.h; path = ../../../Engine/src/Engine/Window.h; sourceTree = "<group>"; };
 		4495DEEB274029C600B1ABF0 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DF98C5274073A5008BBD74 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		44DF98C6274073A5008BBD74 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
@@ -28,6 +35,9 @@
 		44DF98CB27407CE1008BBD74 /* EntryPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryPoint.h; sourceTree = "<group>"; };
 		44DF98CE274087F7008BBD74 /* Log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
 		44DF98CF274087F7008BBD74 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		44F868F2274357BD006B237A /* DarwinWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DarwinWindow.cpp; path = ../../../../Engine/src/Engine/Platforms/DarwinWindow.cpp; sourceTree = "<group>"; };
+		44F868F3274357BD006B237A /* DarwinWindow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; name = DarwinWindow.h; path = ../../../../Engine/src/Engine/Platforms/DarwinWindow.h; sourceTree = "<group>"; };
+		44F868FD27436309006B237A /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../../usr/local/Cellar/glfw/3.3.4/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F868FE27436309006B237A /* libglfw.3.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,21 +62,6 @@
 			path = Events;
 			sourceTree = "<group>";
 		};
-		4478941C27430AA2003F4E17 /* Platform */ = {
-			isa = PBXGroup;
-			children = (
-				4478941D27430AAD003F4E17 /* Darwin */,
-			);
-			path = Platform;
-			sourceTree = "<group>";
-		};
-		4478941D27430AAD003F4E17 /* Darwin */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Darwin;
-			sourceTree = "<group>";
-		};
 		4478942127430DDD003F4E17 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +75,7 @@
 			children = (
 				44DF98BF27406F6C008BBD74 /* src */,
 				4495DEEC274029C600B1ABF0 /* Products */,
+				44F868F627435D06006B237A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,16 +99,34 @@
 		44DF98C4274072BD008BBD74 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				44F868F12743578E006B237A /* Platforms */,
 				4478942127430DDD003F4E17 /* Core */,
-				4478941C27430AA2003F4E17 /* Platform */,
 				447894152742D419003F4E17 /* Events */,
 				44DF98C5274073A5008BBD74 /* Application.cpp */,
 				44DF98C6274073A5008BBD74 /* Application.h */,
 				44DF98CB27407CE1008BBD74 /* EntryPoint.h */,
 				44DF98CE274087F7008BBD74 /* Log.cpp */,
 				44DF98CF274087F7008BBD74 /* Log.h */,
+				4478942427431294003F4E17 /* Window.h */,
 			);
 			path = Engine;
+			sourceTree = "<group>";
+		};
+		44F868F12743578E006B237A /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				44F868F2274357BD006B237A /* DarwinWindow.cpp */,
+				44F868F3274357BD006B237A /* DarwinWindow.h */,
+			);
+			path = Platforms;
+			sourceTree = "<group>";
+		};
+		44F868F627435D06006B237A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44F868FD27436309006B237A /* libglfw.3.3.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +140,11 @@
 				44DF98CA274077E8008BBD74 /* Engine.h in Headers */,
 				447894172742D42A003F4E17 /* Event.h in Headers */,
 				44DF98C8274073A5008BBD74 /* Application.h in Headers */,
+				44F868DE274321B6006B237A /* epch.h in Headers */,
+				44F868E127432667006B237A /* Window.h in Headers */,
 				44DF98D1274087F7008BBD74 /* Log.h in Headers */,
+				44F868F027435708006B237A /* KeyEvent.h in Headers */,
+				44F868F5274357BD006B237A /* DarwinWindow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F868F4274357BD006B237A /* DarwinWindow.cpp in Sources */,
 				44DF98D0274087F7008BBD74 /* Log.cpp in Sources */,
 				44DF98C7274073A5008BBD74 /* Application.cpp in Sources */,
 			);
@@ -318,18 +338,17 @@
 				HEADER_SEARCH_PATHS = (
 					"vendor/spdlog/include/**",
 					"vendor/GLFW/include/**",
-					"src/Engine/Core/**",
 				);
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				OTHER_CPLUSPLUSFLAGS = (
-					"$(OTHER_CFLAGS)",
-					"-I/src/Engine/Core/",
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.4/lib,
 				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = (
-					"vendor/GLFW/include/**",
 					"vendor/spdlog/include/**",
 					"src/Engine/Core/**",
 				);
@@ -349,18 +368,17 @@
 				HEADER_SEARCH_PATHS = (
 					"vendor/spdlog/include/**",
 					"vendor/GLFW/include/**",
-					"src/Engine/Core/**",
 				);
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				OTHER_CPLUSPLUSFLAGS = (
-					"$(OTHER_CFLAGS)",
-					"-I/src/Engine/Core/",
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.4/lib,
 				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = (
-					"vendor/GLFW/include/**",
 					"vendor/spdlog/include/**",
 					"src/Engine/Core/**",
 				);

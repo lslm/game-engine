@@ -1,17 +1,22 @@
 #include "Application.h"
 
-#include "Events/ApplicationEvent.h"
-#include "Events/KeyEvent.h"
 #include "Log.h"
 
 namespace Engine {
-    Application::Application() {}
+    Application::Application()
+    {
+        WindowProps windowsProps = WindowProps("Game engine", 1280, 720);
+        m_Window = std::unique_ptr<DarwinWindow>(DarwinWindow::Create(windowsProps));
+    }
+    
     Application::~Application() {}
 
     void Application::Run() {
-        KeyPressedEvent e(1, 1);
-        ENGINE_CORE_TRACE(e);
-        while (true) {}
+        ENGINE_CORE_INFO("GLFW initialized");
+        while (m_Running)
+        {
+            m_Window->OnUpdate();
+        }
     }
 
     void Application::EngineVersion() {

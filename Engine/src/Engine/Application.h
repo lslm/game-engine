@@ -1,6 +1,8 @@
 #pragma once
 
-#include "Engine/Event.h"
+#include "epch.h"
+
+#include "Engine/DarwinWindow.h"
 
 namespace Engine {
     class Application {
@@ -9,6 +11,10 @@ namespace Engine {
         virtual ~Application();
         void Run();
         void EngineVersion();
+        
+    private:
+        std::unique_ptr<DarwinWindow> m_Window;
+        bool m_Running = true;
     };
 
     Application* CreateApplication();
