@@ -27,6 +27,7 @@
 		447894112742D3A3003F4E17 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		4495DEFB274029EF00B1ABF0 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DF98C127407147008BBD74 /* SandboxApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SandboxApp.cpp; sourceTree = "<group>"; };
+		44F868FF274363A4006B237A /* Sandbox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sandbox.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 		4495DEFD274029EF00B1ABF0 /* Sandbox */ = {
 			isa = PBXGroup;
 			children = (
+				44F868FF274363A4006B237A /* Sandbox.entitlements */,
 				44DF98C02740712D008BBD74 /* src */,
 			);
 			path = Sandbox;
@@ -260,10 +262,19 @@
 		4495DF03274029EF00B1ABF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Sandbox/Sandbox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7FR3M7PFZ;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = ../engine/vendor/spdlog/include;
+				HEADER_SEARCH_PATHS = (
+					../engine/vendor/spdlog/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-I/src/Engine/Core/",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
@@ -272,10 +283,19 @@
 		4495DF04274029EF00B1ABF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Sandbox/Sandbox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7FR3M7PFZ;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = ../engine/vendor/spdlog/include;
+				HEADER_SEARCH_PATHS = (
+					../engine/vendor/spdlog/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-I/src/Engine/Core/",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};

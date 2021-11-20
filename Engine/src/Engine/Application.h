@@ -1,7 +1,7 @@
 #pragma once
 
-#include <stdio.h>
-#include "Engine/Event.h"
+#include "epch.h"
+#include "Window.h"
 
 namespace Engine {
     class Application {
@@ -10,6 +10,10 @@ namespace Engine {
         virtual ~Application();
         void Run();
         void EngineVersion();
+        
+    private:
+        std::unique_ptr<Window> m_Window;
+        bool m_Running = true;
     };
 
     Application* CreateApplication();

@@ -1,6 +1,7 @@
+#include "Event.h"
+
 namespace Engine
 {
-
     class KeyEvent : public Event
     {
     public:

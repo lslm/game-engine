@@ -1,17 +1,26 @@
 #include "Application.h"
 
-#include "Events/ApplicationEvent.h"
-#include "Events/KeyEvent.h"
 #include "Log.h"
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 
 namespace Engine {
-    Application::Application() {}
+    Application::Application()
+    {
+        WindowProps windowsProps = WindowProps("Game engine", 1280, 720);
+        m_Window = std::unique_ptr<Window>(Window::Create(windowsProps));
+    }
+    
     Application::~Application() {}
 
     void Application::Run() {
-        KeyPressedEvent e(1, 1);
-        ENGINE_CORE_TRACE(e);
-        while (true) {}
+        ENGINE_CORE_INFO("GLFW initialized");
+        while (m_Running)
+        {
+            glClearColor(1, 0, 1, 1);
+            glClear(GL_COLOR_BUFFER_BIT);
+            m_Window->OnUpdate();
+        }
     }
 
     void Application::EngineVersion() {
