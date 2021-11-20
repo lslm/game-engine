@@ -5,3 +5,5 @@
 #include "Engine/EntryPoint.h"
 #include "Engine/DarwinWindow.h"
 #include "Engine/Event.h"
+#include "Engine/Layer.h"
+#include "Engine/LayerStack.h"
