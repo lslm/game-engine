@@ -1,9 +1,28 @@
 #include "Engine.h"
 
+class ExampleLayer : public Engine::Layer
+{
+public:
+    ExampleLayer() : Layer("Example") {}
+    
+    void OnUpdate() override
+    {
+        INFO_LOG("ExampleLayer::Update");
+    }
+    
+    void OnEvent(Engine::Event& event) override
+    {
+        TRACE_LOG("{0}", event);
+    }
+};
+
 class Sandbox : public Engine::Application
 {
 public:
-    Sandbox() {}
+    Sandbox()
+    {
+        PushLayer(new ExampleLayer());
+    }
     ~Sandbox() {}
 };
 
