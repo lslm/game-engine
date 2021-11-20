@@ -17,7 +17,22 @@
 		44D013B0274976860013CE9F /* LayerStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D013AF274975A30013CE9F /* LayerStack.cpp */; };
 		44D013B12749768C0013CE9F /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D013AA274972DD0013CE9F /* Layer.cpp */; };
 		44D013B5274994960013CE9F /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D013B3274994960013CE9F /* ImGuiLayer.cpp */; };
-		44D013B6274994960013CE9F /* ImGuiLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D013B4274994960013CE9F /* ImGuiLayer.h */; };
+		44D013B6274994960013CE9F /* ImGuiLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D013B4274994960013CE9F /* ImGuiLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44D013E52749AFC80013CE9F /* imstb_rectpack.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D013DA2749AFC70013CE9F /* imstb_rectpack.h */; };
+		44D013E62749AFC80013CE9F /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D013DB2749AFC70013CE9F /* imgui_widgets.cpp */; };
+		44D013E72749AFC80013CE9F /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D013DC2749AFC70013CE9F /* imgui_draw.cpp */; };
+		44D013E82749AFC80013CE9F /* imconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D013DD2749AFC70013CE9F /* imconfig.h */; };
+		44D013E92749AFC80013CE9F /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D013DE2749AFC70013CE9F /* imgui_tables.cpp */; };
+		44D013EA2749AFC80013CE9F /* imgui_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D013DF2749AFC70013CE9F /* imgui_internal.h */; };
+		44D013EB2749AFC80013CE9F /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D013E02749AFC70013CE9F /* imgui.cpp */; };
+		44D013EC2749AFC80013CE9F /* imstb_textedit.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D013E12749AFC80013CE9F /* imstb_textedit.h */; };
+		44D013ED2749AFC80013CE9F /* imstb_truetype.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D013E22749AFC80013CE9F /* imstb_truetype.h */; };
+		44D013EE2749AFC80013CE9F /* imgui.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D013E32749AFC80013CE9F /* imgui.h */; };
+		44D013EF2749AFC80013CE9F /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D013E42749AFC80013CE9F /* imgui_demo.cpp */; };
+		44D013F32749B0240013CE9F /* ImGuiOpenGLRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44D013F02749B0240013CE9F /* ImGuiOpenGLRenderer.cpp */; };
+		44D013F42749B0240013CE9F /* ImGuiOpenGLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D013F12749B0240013CE9F /* ImGuiOpenGLRenderer.h */; };
+		44D013F52749B0240013CE9F /* ImGuiOpenGLRendererLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D013F22749B0240013CE9F /* ImGuiOpenGLRendererLoader.h */; };
+		44D013F62749B9510013CE9F /* MouseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D013A627494E8E0013CE9F /* MouseEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44DF98C7274073A5008BBD74 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44DF98C5274073A5008BBD74 /* Application.cpp */; };
 		44DF98C8274073A5008BBD74 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 44DF98C6274073A5008BBD74 /* Application.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44DF98CA274077E8008BBD74 /* Engine.h in Headers */ = {isa = PBXBuildFile; fileRef = 44DF98C9274077E8008BBD74 /* Engine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,6 +63,20 @@
 		44D013AF274975A30013CE9F /* LayerStack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LayerStack.cpp; path = ../../../Engine/src/Engine/LayerStack.cpp; sourceTree = "<group>"; };
 		44D013B3274994960013CE9F /* ImGuiLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ImGuiLayer.cpp; path = ../../../../Engine/src/Engine/ImGui/ImGuiLayer.cpp; sourceTree = "<group>"; };
 		44D013B4274994960013CE9F /* ImGuiLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImGuiLayer.h; path = ../../../../Engine/src/Engine/ImGui/ImGuiLayer.h; sourceTree = "<group>"; };
+		44D013DA2749AFC70013CE9F /* imstb_rectpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_rectpack.h; sourceTree = "<group>"; };
+		44D013DB2749AFC70013CE9F /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_widgets.cpp; sourceTree = "<group>"; };
+		44D013DC2749AFC70013CE9F /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_draw.cpp; sourceTree = "<group>"; };
+		44D013DD2749AFC70013CE9F /* imconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imconfig.h; sourceTree = "<group>"; };
+		44D013DE2749AFC70013CE9F /* imgui_tables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_tables.cpp; sourceTree = "<group>"; };
+		44D013DF2749AFC70013CE9F /* imgui_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_internal.h; sourceTree = "<group>"; };
+		44D013E02749AFC70013CE9F /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui.cpp; sourceTree = "<group>"; };
+		44D013E12749AFC80013CE9F /* imstb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_textedit.h; sourceTree = "<group>"; };
+		44D013E22749AFC80013CE9F /* imstb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_truetype.h; sourceTree = "<group>"; };
+		44D013E32749AFC80013CE9F /* imgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui.h; sourceTree = "<group>"; };
+		44D013E42749AFC80013CE9F /* imgui_demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_demo.cpp; sourceTree = "<group>"; };
+		44D013F02749B0240013CE9F /* ImGuiOpenGLRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImGuiOpenGLRenderer.cpp; path = ../../../../../Engine/src/Engine/Platforms/ImGui/ImGuiOpenGLRenderer.cpp; sourceTree = "<group>"; };
+		44D013F12749B0240013CE9F /* ImGuiOpenGLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImGuiOpenGLRenderer.h; path = ../../../../../Engine/src/Engine/Platforms/ImGui/ImGuiOpenGLRenderer.h; sourceTree = "<group>"; };
+		44D013F22749B0240013CE9F /* ImGuiOpenGLRendererLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImGuiOpenGLRendererLoader.h; path = ../../../../../Engine/src/Engine/Platforms/ImGui/ImGuiOpenGLRendererLoader.h; sourceTree = "<group>"; };
 		44DF98C5274073A5008BBD74 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		44DF98C6274073A5008BBD74 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		44DF98C9274077E8008BBD74 /* Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
@@ -117,6 +146,27 @@
 			path = ImGui;
 			sourceTree = "<group>";
 		};
+		44D013B7274997730013CE9F /* ImGui */ = {
+			isa = PBXGroup;
+			children = (
+				44D013F02749B0240013CE9F /* ImGuiOpenGLRenderer.cpp */,
+				44D013F12749B0240013CE9F /* ImGuiOpenGLRenderer.h */,
+				44D013F22749B0240013CE9F /* ImGuiOpenGLRendererLoader.h */,
+				44D013DD2749AFC70013CE9F /* imconfig.h */,
+				44D013E42749AFC80013CE9F /* imgui_demo.cpp */,
+				44D013DC2749AFC70013CE9F /* imgui_draw.cpp */,
+				44D013DF2749AFC70013CE9F /* imgui_internal.h */,
+				44D013DE2749AFC70013CE9F /* imgui_tables.cpp */,
+				44D013DB2749AFC70013CE9F /* imgui_widgets.cpp */,
+				44D013E02749AFC70013CE9F /* imgui.cpp */,
+				44D013E32749AFC80013CE9F /* imgui.h */,
+				44D013DA2749AFC70013CE9F /* imstb_rectpack.h */,
+				44D013E12749AFC80013CE9F /* imstb_textedit.h */,
+				44D013E22749AFC80013CE9F /* imstb_truetype.h */,
+			);
+			path = ImGui;
+			sourceTree = "<group>";
+		};
 		44DF98BF27406F6C008BBD74 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +200,7 @@
 		44F868F12743578E006B237A /* Platforms */ = {
 			isa = PBXGroup;
 			children = (
+				44D013B7274997730013CE9F /* ImGui */,
 				44F868F2274357BD006B237A /* DarwinWindow.cpp */,
 				44F868F3274357BD006B237A /* DarwinWindow.h */,
 			);
@@ -173,18 +224,27 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D013E52749AFC80013CE9F /* imstb_rectpack.h in Headers */,
 				44DF98CD27407EB8008BBD74 /* EntryPoint.h in Headers */,
+				44D013EE2749AFC80013CE9F /* imgui.h in Headers */,
 				44D013AD2749752E0013CE9F /* LayerStack.h in Headers */,
 				44DF98CA274077E8008BBD74 /* Engine.h in Headers */,
+				44D013EA2749AFC80013CE9F /* imgui_internal.h in Headers */,
+				44D013ED2749AFC80013CE9F /* imstb_truetype.h in Headers */,
 				447894172742D42A003F4E17 /* Event.h in Headers */,
 				44D013B6274994960013CE9F /* ImGuiLayer.h in Headers */,
+				44D013EC2749AFC80013CE9F /* imstb_textedit.h in Headers */,
 				44DF98C8274073A5008BBD74 /* Application.h in Headers */,
 				44F868DE274321B6006B237A /* epch.h in Headers */,
 				44D013AE274975550013CE9F /* Layer.h in Headers */,
 				44F868E127432667006B237A /* Window.h in Headers */,
 				44D013A7274958E30013CE9F /* ApplicationEvent.h in Headers */,
+				44D013F62749B9510013CE9F /* MouseEvent.h in Headers */,
+				44D013F52749B0240013CE9F /* ImGuiOpenGLRendererLoader.h in Headers */,
+				44D013E82749AFC80013CE9F /* imconfig.h in Headers */,
 				44DF98D1274087F7008BBD74 /* Log.h in Headers */,
 				44F868F027435708006B237A /* KeyEvent.h in Headers */,
+				44D013F42749B0240013CE9F /* ImGuiOpenGLRenderer.h in Headers */,
 				44F868F5274357BD006B237A /* DarwinWindow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +308,13 @@
 			files = (
 				44F868F4274357BD006B237A /* DarwinWindow.cpp in Sources */,
 				44D013B5274994960013CE9F /* ImGuiLayer.cpp in Sources */,
+				44D013EF2749AFC80013CE9F /* imgui_demo.cpp in Sources */,
+				44D013F32749B0240013CE9F /* ImGuiOpenGLRenderer.cpp in Sources */,
 				44DF98D0274087F7008BBD74 /* Log.cpp in Sources */,
+				44D013E72749AFC80013CE9F /* imgui_draw.cpp in Sources */,
+				44D013E92749AFC80013CE9F /* imgui_tables.cpp in Sources */,
+				44D013EB2749AFC80013CE9F /* imgui.cpp in Sources */,
+				44D013E62749AFC80013CE9F /* imgui_widgets.cpp in Sources */,
 				44D013B0274976860013CE9F /* LayerStack.cpp in Sources */,
 				44DF98C7274073A5008BBD74 /* Application.cpp in Sources */,
 				44D013B12749768C0013CE9F /* Layer.cpp in Sources */,
@@ -380,9 +446,9 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/include,
+					"$(SRCROOT)/vendor/imgui",
 					"vendor/spdlog/include/**",
-					vendor/imgui,
+					/usr/local/include,
 				);
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LIBRARY_SEARCH_PATHS = (
@@ -412,9 +478,9 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/include,
+					"$(SRCROOT)/vendor/imgui",
 					"vendor/spdlog/include/**",
-					vendor/imgui,
+					/usr/local/include,
 				);
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LIBRARY_SEARCH_PATHS = (
