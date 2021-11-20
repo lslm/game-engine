@@ -4,7 +4,7 @@
 
 namespace Engine
 {
-    class WindowResizeEvent :  public Event
+    class WindowResizeEvent : public Event
     {
     public:
         WindowResizeEvent(unsigned int width, unsigned int height) : m_Width(width), m_Height(height) {}
@@ -18,11 +18,8 @@ namespace Engine
             return ss.str();
         }
         
-        static EventType GetStaticType()        { return EventType::WindowResize; }
-        EventType GetEventType() const override { return GetStaticType(); }
-        const char* GetName() const override    { return "WindowResize"; }
-        
-        virtual int GetCategoryFlags() const override { return EventCategoryApplication; }
+        EVENT_CLASS_TYPE(WindowResize);
+        EVENT_CLASS_CATEGORY(EventCategoryApplication);
         
     private:
         unsigned int m_Width, m_Height;

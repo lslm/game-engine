@@ -7,7 +7,7 @@ namespace Engine
     public:
         inline int GetKeyCode() const { return m_KeyCode; }
         
-        virtual int GetCategoryFlags() const override { return EventCategoryKeyboard | EventCategoryInput; }
+        EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput);
     
     protected:
         KeyEvent(int keyCode) : m_KeyCode(keyCode) {}
@@ -29,9 +29,7 @@ namespace Engine
             return ss.str();
         }
         
-        static EventType GetStaticType()        { return EventType::KeyPressed; }
-        EventType GetEventType() const override { return GetStaticType(); }
-        const char* GetName() const override    { return "KeyPressed"; }
+        EVENT_CLASS_TYPE(KeyPressed);
     
     private:
         int m_RepeatCount;
@@ -49,8 +47,6 @@ namespace Engine
             return ss.str();
         }
         
-        static EventType GetStaticType()        { return EventType::KeyReleased; }
-        EventType GetEventType() const override { return GetStaticType(); }
-        const char* GetName() const override    { return "KeyReleased"; }
+        EVENT_CLASS_TYPE(KeyReleased);
     };
 }
