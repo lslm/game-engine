@@ -1,5 +1,9 @@
 #include "DarwinWindow.h"
 
+#include "ApplicationEvent.h"
+#include "KeyEvent.h"
+#include "MouseEvent.h"
+
 namespace Engine
 {
     static bool s_GLFWInitialized = false;
@@ -16,6 +20,11 @@ namespace Engine
     
     DarwinWindow::~DarwinWindow()
     {
+    }
+    
+    static void GLFWErrorCallback(int error, const char* description)
+    {
+        ENGINE_CORE_ERROR("GLFW error ({0}): {1}", error, description);
     }
     
     void DarwinWindow::Init(const WindowProps& props)
@@ -35,6 +44,8 @@ namespace Engine
             // - Compatibility (includes both modern and deprecated functions)
             glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
             glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+            
+            glfwSetErrorCallback(GLFWErrorCallback);
             s_GLFWInitialized = true;
         }
         
@@ -46,6 +57,81 @@ namespace Engine
         glfwMakeContextCurrent(m_Window);
         glfwSetWindowUserPointer(m_Window, &m_Data);
         SetVSync(true);
+        
+        // Set GLFW callbacks
+        glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
+        {
+            WindowData& windowData = *(WindowData*)glfwGetWindowUserPointer(window);
+            windowData.Width = width;
+            windowData.Height = height;
+            
+            WindowResizeEvent windowResizeEvent(width, height);
+            windowData.EventCallback(windowResizeEvent);
+        });
+        
+        glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window) {
+            WindowData& windowData = *(WindowData*)glfwGetWindowUserPointer(window);
+            WindowCloseEvent windowCloseEvent;
+            windowData.EventCallback(windowCloseEvent);
+        });
+        
+        glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods){
+            WindowData& windowData = *(WindowData*)glfwGetWindowUserPointer(window);
+            
+            switch(action)
+            {
+                case GLFW_PRESS:
+                {
+                    KeyPressedEvent keyPressedEvent(key, 0);
+                    windowData.EventCallback(keyPressedEvent);
+                    break;
+                }
+                case GLFW_RELEASE:
+                {
+                    KeyReleasedEvent keyReleasedEvent(key);
+                    windowData.EventCallback(keyReleasedEvent);
+                    break;
+                }
+                case GLFW_REPEAT:
+                {
+                    KeyPressedEvent keyPressedEvent(key, 1);
+                    windowData.EventCallback(keyPressedEvent);
+                    break;
+                }
+            }
+        });
+        
+        glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods){
+            WindowData& windowData = *(WindowData*)glfwGetWindowUserPointer(window);
+            
+            switch(action)
+            {
+                case GLFW_PRESS:
+                {
+                    MouseButtonPressedEvent mouseButtonPressedEvent(button);
+                    windowData.EventCallback(mouseButtonPressedEvent);
+                    break;
+                }
+                case GLFW_RELEASE:
+                {
+                    MouseButtonReleasedEvent mouseButtonReleaseEvent(button);
+                    windowData.EventCallback(mouseButtonReleaseEvent);
+                    break;
+                }
+            }
+        });
+        
+        glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xOffset, double yOffset){
+            WindowData& windowData = *(WindowData*)glfwGetWindowUserPointer(window);
+            MouseScrolledEvent mouseScrolledEvent((float) xOffset, (float) yOffset);
+            windowData.EventCallback(mouseScrolledEvent);
+        });
+        
+        glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xPosition, double yPosition){
+            WindowData& windowData = *(WindowData*)glfwGetWindowUserPointer(window);
+            MouseMovedEvent mouseMovedEvent((float) xPosition, (float) yPosition);
+            windowData.EventCallback(mouseMovedEvent);
+        });
     }
     
     void DarwinWindow::Shutdown()
