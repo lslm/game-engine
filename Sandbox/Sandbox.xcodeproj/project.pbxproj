@@ -269,6 +269,7 @@
 				HEADER_SEARCH_PATHS = (
 					../engine/vendor/spdlog/include,
 					/usr/local/include,
+					../engine/vendor/imgui,
 				);
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -290,6 +291,7 @@
 				HEADER_SEARCH_PATHS = (
 					../engine/vendor/spdlog/include,
 					/usr/local/include,
+					../engine/vendor/imgui,
 				);
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				OTHER_CPLUSPLUSFLAGS = (

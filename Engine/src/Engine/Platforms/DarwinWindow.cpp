@@ -137,6 +137,12 @@ namespace Engine
             MouseMovedEvent mouseMovedEvent((float) xPosition, (float) yPosition);
             windowData.EventCallback(mouseMovedEvent);
         });
+        
+        glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode){
+            WindowData& windowData = *(WindowData*)glfwGetWindowUserPointer(window);
+            KeyTypedEvent keyTypedEvent(keycode);
+            windowData.EventCallback(keyTypedEvent);
+        });
     }
     
     void DarwinWindow::Shutdown()
