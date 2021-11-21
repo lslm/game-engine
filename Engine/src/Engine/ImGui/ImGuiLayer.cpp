@@ -61,6 +61,8 @@ namespace Engine
         ImGuiIO& io = ImGui::GetIO();
         Application& application = Application::Get();
         io.DisplaySize = ImVec2(application.GetWindow().GetWidth(), application.GetWindow().GetHeight());
+
+        SetDisplaySizeScale();
         
         float time = (float)glfwGetTime();
         io.DeltaTime = m_Time > 0.0f ? (time - m_Time) : (1.0f / 60.0f);
@@ -157,9 +159,17 @@ namespace Engine
     {
         ImGuiIO& io = ImGui::GetIO();
         io.DisplaySize = ImVec2(e.GetWidth(), e.GetHeight());
-        io.DisplayFramebufferScale = ImVec2(1.0f, 1.0f);
         glViewport(0, 0, e.GetWidth(), e.GetHeight());
         
         return false;
+    }
+    
+    void ImGuiLayer::SetDisplaySizeScale()
+    {
+        float xScale, yScale;
+        GLFWwindow* window = glfwGetCurrentContext();
+        glfwGetWindowContentScale(window, &xScale, &yScale);
+        ImGuiIO& io = ImGui::GetIO();
+        io.DisplayFramebufferScale = ImVec2(xScale, yScale);
     }
 }
