@@ -25,6 +25,11 @@ namespace Engine
         io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;
         io.BackendFlags |= ImGuiBackendFlags_HasSetMousePos;
         
+        ImGuiStyle& style = ImGui::GetStyle();
+        style.ScaleAllSizes(2);
+        io.FontGlobalScale = 0.5f;
+        io.Fonts->AddFontFromFileTTF("/System/Library/Fonts/SFNS.ttf", 32);
+
         io.KeyMap[ImGuiKey_Tab] = GLFW_KEY_TAB;
         io.KeyMap[ImGuiKey_LeftArrow] = GLFW_KEY_LEFT;
         io.KeyMap[ImGuiKey_RightArrow] = GLFW_KEY_RIGHT;
