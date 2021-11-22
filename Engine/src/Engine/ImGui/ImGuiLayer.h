@@ -32,6 +32,8 @@ namespace Engine
         bool OnKeyTypedEvent(KeyTypedEvent& e);
         bool OnWindowResizedEvent(WindowResizeEvent& e);
         
+        void SetDisplaySizeScale();
+        
         float m_Time = 0.0f;
     };
 }
