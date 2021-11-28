@@ -1,4 +1,5 @@
 bin/
+Editor/imgui.ini
 
 *.icloud
 .DS_Store

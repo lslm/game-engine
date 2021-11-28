@@ -1,5 +1,6 @@
 CC = clang
 CXX = clang++ -std=c++17
+CFLAGS = -Wno-deprecated-declarations
 LDFLAGS = lib/glfw/src/libglfw3.a lib/glad/src/glad.o lib/spdlog/libspdlog.a
 LDFLAGS += -Ilib/spdlog/include -Ilib/glfw/include -Ilib/glad/include -Isrc
 LDFLAGS += -framework OpenGL -framework IOKit -framework CoreVideo -framework Cocoa
@@ -19,7 +20,7 @@ dirs:
 	mkdir -p ./$(BIN)
 
 game: $(OBJ)
-	$(CXX) -dynamiclib -o $(BIN)/libengine.dylib $^ $(LDFLAGS)
+	$(CXX) $(CFLAGS) -dynamiclib -o $(BIN)/libengine.dylib $^ $(LDFLAGS)
 
 %.o: %.cpp
 	$(CXX) -o $@ -c $<
