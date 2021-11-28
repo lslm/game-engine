@@ -6,11 +6,12 @@ This project is a experiment about game engine development. It's inspired by [Ch
 This project only runs on macOS, but it should not be difficult to adapt the Makefiles to build on any operating system.
 
 ```
-cd Editor && make &&
+git clone --recurse-submodules https://github.com/lslm/game-engine
+cd game-engine/Editor && make
 ./bin/editor
 ```
 
-# Technologies
+# Dependencies
 - [GLFW](https://github.com/glfw/glfw)
 - [Glad](https://glad.dav1d.de)
 - [Dear ImGui](https://github.com/ocornut/imgui)
