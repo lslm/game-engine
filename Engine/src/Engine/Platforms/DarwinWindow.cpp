@@ -1,9 +1,5 @@
 #include "DarwinWindow.h"
 
-#include "../Events/ApplicationEvent.h"
-#include "../Events/KeyEvent.h"
-#include "../Events/MouseEvent.h"
-
 namespace Engine
 {
     static bool s_GLFWInitialized = false;

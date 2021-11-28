@@ -1,3 +1,5 @@
+#pragma once
+
 #include <stdio.h>
 #include "epch.h"
 #include "Engine/Application.h"

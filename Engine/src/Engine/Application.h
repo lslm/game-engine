@@ -2,8 +2,8 @@
 
 #include "epch.h"
 #include "Window.h"
-#include "Engine/Events/ApplicationEvent.h"
 #include "LayerStack.h"
+#include "Engine/Events/ApplicationEvent.h"
 
 namespace Engine {
     class Application {
