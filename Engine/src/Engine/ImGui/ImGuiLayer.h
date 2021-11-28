@@ -1,12 +1,12 @@
 #pragma once
 
 #include "epch.h"
-#include "Engine/Layer.h"
-#include "ApplicationEvent.h"
-#include "MouseEvent.h"
-#include "KeyEvent.h"
+#include "../Layer.h"
+#include "../Events/ApplicationEvent.h"
+#include "../Events/MouseEvent.h"
+#include "../Events/KeyEvent.h"
 
-#include <GL/glew.h>
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 namespace Engine

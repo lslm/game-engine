@@ -1,7 +1,6 @@
 #include "Application.h"
 
 #include "Log.h"
-#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 namespace Engine {
@@ -12,9 +11,8 @@ namespace Engine {
     Application::Application()
     {
         s_Instance = this;
-    
-        WindowProps windowsProps = WindowProps("Game engine", 1280, 720);
-        m_Window = std::unique_ptr<Window>(Window::Create(windowsProps));
+
+        m_Window = std::unique_ptr<Window>(Window::Create());
         m_Window->SetEventCallback(BIND_EVENT_FUNCTION(OnEvent));
     }
     

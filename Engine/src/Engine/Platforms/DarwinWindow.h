@@ -1,9 +1,10 @@
 #pragma once
-#include "Window.h"
 
-#include <GL/glew.h>
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "Log.h"
+
+#include "../Window.h"
+#include "../Log.h"
 
 namespace Engine
 {

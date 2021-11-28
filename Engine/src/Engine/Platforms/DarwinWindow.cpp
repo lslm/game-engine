@@ -1,8 +1,8 @@
 #include "DarwinWindow.h"
 
-#include "ApplicationEvent.h"
-#include "KeyEvent.h"
-#include "MouseEvent.h"
+#include "../Events/ApplicationEvent.h"
+#include "../Events/KeyEvent.h"
+#include "../Events/MouseEvent.h"
 
 namespace Engine
 {
@@ -57,9 +57,10 @@ namespace Engine
         glfwMakeContextCurrent(m_Window);
         glfwSetWindowUserPointer(m_Window, &m_Data);
         
-        // initializes GLEW
-        glewExperimental = GL_TRUE;
-        glewInit();
+        if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+        {
+            std::cout << "Failed to initialize GLAD" << std::endl;
+        } 
         
         SetVSync(true);
         

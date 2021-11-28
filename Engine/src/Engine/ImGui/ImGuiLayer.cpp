@@ -1,7 +1,7 @@
 #include "ImGuiLayer.h"
 
-#include "ImGuiOpenGLRenderer.h"
-#include "Application.h"
+#include "../../ImGui/ImGuiOpenGLRenderer.h"
+#include "../Application.h"
 
 namespace Engine
 {
