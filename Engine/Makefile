@@ -1,8 +1,7 @@
 CC = clang
 CXX = clang++ -std=c++17
-CFLAGS = -Ilib/glfw/include -Ilib/glad/include
 LDFLAGS = lib/glfw/src/libglfw3.a lib/glad/src/glad.o lib/spdlog/libspdlog.a
-LDFLAGS += -Ilib/spdlog/include -Isrc
+LDFLAGS += -Ilib/spdlog/include -Ilib/glfw/include -Ilib/glad/include -Isrc
 LDFLAGS += -framework OpenGL -framework IOKit -framework CoreVideo -framework Cocoa
 
 SRC = $(wildcard src/**/*.cpp src/**/**/*.cpp)
@@ -23,7 +22,7 @@ game: $(OBJ)
 	$(CXX) -dynamiclib -o $(BIN)/libengine.dylib $^ $(LDFLAGS)
 
 %.o: %.cpp
-	$(CXX) -o $@ -c $< $(CFLAGS)
+	$(CXX) -o $@ -c $<
 
 clean:
 	rm -rf $(BIN) $(OBJ)

@@ -1,6 +1,6 @@
-CC = clang++ -std=c++17
-CFLAGS = -I../Engine/src -I../Engine/lib/spdlog/include
-LDFLAGS = ../Engine/bin/libengine.dylib
+CXX = clang++ -std=c++17
+LDFLAGS = ../Engine/bin/libengine.dylib -I../Engine/src -I../Engine/lib/spdlog/include
+LDFLAGS += -I../Engine/lib/glfw/include -I../Engine/lib/glad/include
 
 SRC = $(wildcard src/*.cpp)
 OBJ = $(SRC:.c=.o)
@@ -15,10 +15,10 @@ libs:
 	cd ../Engine && make
 
 editor: $(OBJ)
-	$(CC) -o $(BIN)/editor $(CFLAGS) $^ $(LDFLAGS)
+	$(CXX) -o $(BIN)/editor $^ $(LDFLAGS)
 
 %.o: %.cpp
-	$(CC) -c -o $@ $^
+	$(CXX) -c -o $@ $^
 
 copy:
 	cp ../Engine/bin/libengine.dylib bin/libengine.dylib
